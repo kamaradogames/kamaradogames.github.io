@@ -4,7 +4,7 @@ import {
   Paper, Typography,
   Card, CardHeader, CardMedia,
   CardContent, CardActions, 
-  CardActionArea,
+  CardActionArea, Tabs, Tab
 } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -73,17 +73,20 @@ function App() {
     <div className={classes.root}>
 
       <Paper elevation={1} className={classes.titleConatiner1}>
-        <Typography variant="h2" component="h2" className={classes.title1}>Kamarado Games</Typography>
+        {/*<Typography variant="h2" component="h2" className={classes.title1}>Kamarado Games</Typography>*/}
+        <img alt="Kamarado Games" src="/images/title.png" style={{ width: '50%'}}/>
       </Paper>
-      <Paper elevation={2} className={classes.titleConatiner2}>
+      {/*<Paper elevation={2} className={classes.titleConatiner2}>
         <Typography variant="h6" component="h6" className={classes.title2}>games by Igor Sotnikov</Typography>
-      </Paper>
+      </Paper>*/}
+
+      <br/>      
 
       <div className={classes.cardGrid}>
         <Card className={classes.card}>
           <CardHeader title="Pebble Way" />
           <CardActionArea onClick={actionAreaClickHandler}>
-            <CardMedia className={classes.cardImage} image="/images/PebbleWayCover.png" title="Pebble Way" />
+            <CardMedia className={classes.cardImage} image="/images/game-icons/pebble-way.png" title="Pebble Way" />
             <CardContent>
               <Typography paragraph>
                 In Pebble Way, you have to help the pebble reach its target without getting caught by the enemy pebbles.
