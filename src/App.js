@@ -106,7 +106,7 @@ function App() {
         <Card className={classes.card}>
           <CardHeader title="Springy Squares" />
           <CardActionArea onClick={actionAreaClickHandler_SpringySquares} >
-            <CardMedia className={classes.cardImage} image="/images/game-icons/springy-squares.png" title="Pebble Way" />
+            <CardMedia className={classes.cardImage} image="/images/game-icons/springy-squares.png" title="Springy Squares" />
             <CardContent  className={classes.cardContent}>
               <Typography paragraph>
               The jumping game for those who want to test themselves or just kill time.
