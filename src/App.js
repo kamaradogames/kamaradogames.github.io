@@ -51,11 +51,16 @@ const useStyles = makeStyles((theme) => ({
   },
 
   card: {
-    width: "300px"
+    width: "300px",
+    margin: "25px"
   },
 
   cardImage: {
     paddingTop: "100%"
+  },
+
+  cardContent: {
+    height: "125px"
   }
 
 }));
@@ -65,29 +70,27 @@ function App() {
 
   const classes = useStyles();
 
-  const actionAreaClickHandler = useCallback(() => {
+  const actionAreaClickHandler_PebbleWay = useCallback(() => {
     window.location = "https://play.google.com/store/apps/details?id=com.IgorSotnikov.PebbleWay"
+  }, [])
+
+  const actionAreaClickHandler_SpringySquares = useCallback(() => {
+    window.location = "https://play.google.com/store/apps/details?id=com.IgorSotnikov.SpringySquares"
   }, [])
 
   return (
     <div className={classes.root}>
 
-      <Paper elevation={1} className={classes.titleConatiner1}>
-        {/*<Typography variant="h2" component="h2" className={classes.title1}>Kamarado Games</Typography>*/}
-        <img alt="Kamarado Games" src="/images/title.png" style={{ width: '50%'}}/>
-      </Paper>
-      {/*<Paper elevation={2} className={classes.titleConatiner2}>
-        <Typography variant="h6" component="h6" className={classes.title2}>games by Igor Sotnikov</Typography>
-      </Paper>*/}
+      <img alt="Kamarado Games" src="/images/title.png" style={{ width: '40%'}}/>
 
       <br/>      
 
       <div className={classes.cardGrid}>
         <Card className={classes.card}>
           <CardHeader title="Pebble Way" />
-          <CardActionArea onClick={actionAreaClickHandler}>
+          <CardActionArea onClick={actionAreaClickHandler_PebbleWay}>
             <CardMedia className={classes.cardImage} image="/images/game-icons/pebble-way.png" title="Pebble Way" />
-            <CardContent>
+            <CardContent className={classes.cardContent}>
               <Typography paragraph>
                 In Pebble Way, you have to help the pebble reach its target without getting caught by the enemy pebbles.
             </Typography>
@@ -96,6 +99,23 @@ function App() {
           <CardActions disableSpacing>
             <div>
               <a href='https://play.google.com/store/apps/details?id=com.IgorSotnikov.PebbleWay&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+            </div>
+          </CardActions>
+        </Card>
+
+        <Card className={classes.card}>
+          <CardHeader title="Springy Squares" />
+          <CardActionArea onClick={actionAreaClickHandler_SpringySquares} >
+            <CardMedia className={classes.cardImage} image="/images/game-icons/springy-squares.png" title="Pebble Way" />
+            <CardContent  className={classes.cardContent}>
+              <Typography paragraph>
+              The jumping game for those who want to test themselves or just kill time.
+            </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions disableSpacing>
+            <div>
+              <a href='https://play.google.com/store/apps/details?id=com.KamaradoGames.SpringySquares&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
             </div>
           </CardActions>
         </Card>
