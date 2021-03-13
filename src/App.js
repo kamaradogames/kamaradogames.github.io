@@ -75,7 +75,7 @@ function App() {
   }, [])
 
   const actionAreaClickHandler_SpringySquares = useCallback(() => {
-    window.location = "https://play.google.com/store/apps/details?id=com.IgorSotnikov.SpringySquares"
+    window.location = "https://play.google.com/store/apps/details?id=com.KamaradoGames.SpringySquares"
   }, [])
 
   return (
