@@ -3,7 +3,7 @@ import { useCallback } from 'react'
 import {
   Paper, Typography,
   Card, CardHeader, CardMedia,
-  CardContent, CardActions, 
+  CardContent, CardActions,
   CardActionArea, Tabs, Tab
 } from '@material-ui/core';
 
@@ -81,9 +81,9 @@ function App() {
   return (
     <div className={classes.root}>
 
-      <img alt="Kamarado Games" src="/images/title.png" style={{ width: '40%'}}/>
+      <img alt="Kamarado Games" src="/images/title.png" style={{ width: '40%' }} />
 
-      <br/>      
+      <br />
 
       <div className={classes.cardGrid}>
         <Card className={classes.card}>
@@ -93,12 +93,13 @@ function App() {
             <CardContent className={classes.cardContent}>
               <Typography paragraph>
                 In Pebble Way, you have to help the pebble reach its target without getting caught by the enemy pebbles.
-            </Typography>
+              </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
-            <div>
+            <div style={{height: "200px"}}>
               <a href='https://play.google.com/store/apps/details?id=com.IgorSotnikov.PebbleWay&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+              <a href="https://kamarado-games.itch.io/pebble-way"><img style={{ width: "100%" }} alt='Available on itch.io' src='/images/itch.io-badge-color.svg' /></a>
             </div>
           </CardActions>
         </Card>
@@ -107,15 +108,32 @@ function App() {
           <CardHeader title="Springy Squares" />
           <CardActionArea onClick={actionAreaClickHandler_SpringySquares} >
             <CardMedia className={classes.cardImage} image="/images/game-icons/springy-squares.png" title="Springy Squares" />
-            <CardContent  className={classes.cardContent}>
+            <CardContent className={classes.cardContent}>
               <Typography paragraph>
-              The jumping game for those who want to test themselves or just kill time.
-            </Typography>
+                The jumping game for those who want to test themselves or just kill time.
+              </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
-            <div>
+            <div style={{height: "200px"}}>
               <a href='https://play.google.com/store/apps/details?id=com.KamaradoGames.SpringySquares&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+            </div>
+          </CardActions>
+        </Card>
+
+        <Card className={classes.card}>
+          <CardHeader title="Cage of Rings" />
+          <CardActionArea onClick={actionAreaClickHandler_SpringySquares} >
+            <CardMedia className={classes.cardImage} image="/images/game-icons/cage-of-rings.png" title="Cage of Rings" />
+            <CardContent className={classes.cardContent}>
+              <Typography paragraph>
+                Memorize the symbols. Turn the rings. Save unfortunate creatures.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions disableSpacing>
+            <div style={{height: "200px"}}>
+              <a href='https://play.google.com/store/apps/details?id=com.KamaradoGames.CageofRings&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
             </div>
           </CardActions>
         </Card>
