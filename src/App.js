@@ -1,10 +1,10 @@
 import { useCallback } from 'react'
 
 import {
-  Paper, Typography,
+  Typography,
   Card, CardHeader, CardMedia,
   CardContent, CardActions,
-  CardActionArea, Tabs, Tab
+  CardActionArea
 } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -134,6 +134,7 @@ function App() {
           <CardActions disableSpacing>
             <div style={{height: "200px"}}>
               <a href='https://play.google.com/store/apps/details?id=com.KamaradoGames.CageofRings&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
+              <a href="https://kamarado-games.itch.io/cage-of-rings"><img style={{ width: "100%" }} alt='Available on itch.io' src='/images/itch.io-badge-color.svg' /></a>
             </div>
           </CardActions>
         </Card>
