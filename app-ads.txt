@@ -60,3 +60,5 @@ appnexus.com, 9393, RESELLER
 lemmatechnologies.com, 362, RESELLER, 7829010c5bebd1fb
 indexexchange.com, 186684, RESELLER, 50b1c356f2c5c8fc
 inmobi.com, 61d733c3779d43e590c51c8bc078e10c, RESELLER, 83e75a7ae333ca9d
+exchange.admazing.co, AM3, RESELLER
+meitu.com, 282, RESELLER
