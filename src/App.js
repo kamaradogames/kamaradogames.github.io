@@ -4,7 +4,7 @@ import {
   Typography,
   Card, CardHeader, CardMedia,
   CardContent, CardActions,
-  CardActionArea
+  CardActionArea, Paper
 } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -78,10 +78,20 @@ function App() {
     window.location = "https://play.google.com/store/apps/details?id=com.KamaradoGames.SpringySquares"
   }, [])
 
+  const actionAreaClickHandler_CageOfRings = useCallback(() => {
+    window.location = "https://play.google.com/store/apps/details?id=com.KamaradoGames.CageofRings"
+  }, [])
+
   return (
     <div className={classes.root}>
 
       <img alt="Kamarado Games" src="/images/title.png" style={{ width: '40%' }} />
+
+      <br />
+
+      <Paper style={{ background: "#ccff00", padding: "10px", color: "#4d6c1b" }}>
+        <span style={{ fontWeight: "500" }}>Support & Feedback:</span> <a href="kamaradogames@gmail.com">kamaradogames@gmail.com</a>
+      </Paper>
 
       <br />
 
@@ -97,7 +107,7 @@ function App() {
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
-            <div style={{height: "200px"}}>
+            <div style={{ height: "200px" }}>
               <a href='https://play.google.com/store/apps/details?id=com.IgorSotnikov.PebbleWay&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
               <a href="https://kamarado-games.itch.io/pebble-way"><img style={{ width: "100%" }} alt='Available on itch.io' src='/images/itch.io-badge-color.svg' /></a>
             </div>
@@ -115,7 +125,7 @@ function App() {
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
-            <div style={{height: "200px"}}>
+            <div style={{ height: "200px" }}>
               <a href='https://play.google.com/store/apps/details?id=com.KamaradoGames.SpringySquares&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
             </div>
           </CardActions>
@@ -123,7 +133,7 @@ function App() {
 
         <Card className={classes.card}>
           <CardHeader title="Cage of Rings" />
-          <CardActionArea onClick={actionAreaClickHandler_SpringySquares} >
+          <CardActionArea onClick={actionAreaClickHandler_CageOfRings} >
             <CardMedia className={classes.cardImage} image="/images/game-icons/cage-of-rings.png" title="Cage of Rings" />
             <CardContent className={classes.cardContent}>
               <Typography paragraph>
@@ -132,7 +142,7 @@ function App() {
             </CardContent>
           </CardActionArea>
           <CardActions disableSpacing>
-            <div style={{height: "200px"}}>
+            <div style={{ height: "200px" }}>
               <a href='https://play.google.com/store/apps/details?id=com.KamaradoGames.CageofRings&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{ width: "100%" }} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' /></a>
               <a href="https://kamarado-games.itch.io/cage-of-rings"><img style={{ width: "100%" }} alt='Available on itch.io' src='/images/itch.io-badge-color.svg' /></a>
             </div>
