@@ -90,7 +90,7 @@ function App() {
       <br />
 
       <Paper style={{ background: "#ccff00", padding: "10px", color: "#4d6c1b" }}>
-        <span style={{ fontWeight: "500" }}>Support & Feedback:</span> <a href="kamaradogames@gmail.com">kamaradogames@gmail.com</a>
+        <span style={{ fontWeight: "500" }}>Support & Feedback:</span> <a href="mailto:kamaradogames@gmail.com">kamaradogames@gmail.com</a>
       </Paper>
 
       <br />
