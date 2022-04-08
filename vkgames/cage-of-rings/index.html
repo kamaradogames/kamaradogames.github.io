@@ -20,7 +20,7 @@
         streamingAssetsUrl: "StreamingAssets",
       companyName: "Kamarado Games",
       productName: "Cage of Rings",
-      productVersion: "1.0.0",
+      productVersion: "1.1.0",
       // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
       // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
     })
@@ -33,9 +33,10 @@
   <script>
 
     let isInitialized = false
+    let userdata = null
 
     vkBridge.send('VKWebAppInit')
-      .then(data => {       
+      .then(data => {
 
         isInitialized = data.result
 
@@ -50,6 +51,13 @@
             .catch(error => {
               console.log(error)
             });
+
+          vkBridge.send("VKWebAppGetUserInfo").then(data => {
+            console.log(data)
+            userdata = data
+          }).catch(error => {
+            console.log(error)
+          });
         }
 
       })
@@ -77,6 +85,13 @@
         });
 
     }
+
+    function showInviteBox() {
+      vkBridge.send("VKWebAppShowInviteBox", {})
+        .then(data => console.log(data.success))
+        .catch(error => console.log(error));
+    }    
+
   </script>
 
 </body>
