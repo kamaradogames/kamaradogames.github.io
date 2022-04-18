@@ -32,8 +32,7 @@
 
   <script>
 
-    let isInitialized = false
-    let userdata = null
+    let isInitialized = false    
 
     vkBridge.send('VKWebAppInit')
       .then(data => {
@@ -44,20 +43,14 @@
           console.error("Не удалось инициализировать vkBridge!", e.data)
         } else {
           console.log("vkBridge инициализирован!")
-          vkBridge.send("VKWebAppShowNativeAds", { ad_format: "interstitial" })
+          
+          /*vkBridge.send("VKWebAppShowNativeAds", { ad_format: "interstitial" })
             .then(data => {
               console.log(data.result)
             })
             .catch(error => {
               console.log(error)
-            });
-
-          vkBridge.send("VKWebAppGetUserInfo").then(data => {
-            console.log(data)
-            userdata = data
-          }).catch(error => {
-            console.log(error)
-          });
+            });*/        
         }
 
       })
@@ -67,7 +60,9 @@
 
     function showAd() {
 
-      if (!isInitialized) {
+      window.unityInstance.SendMessage("VK", "OnAdClosed")
+
+      /*if (!isInitialized) {
         window.unityInstance.SendMessage("VK", "OnAdClosed")
         return;
       }
@@ -82,7 +77,7 @@
         .catch(error => {
           console.log(error)
           window.unityInstance.SendMessage("VK", "OnAdClosed")
-        });
+        });*/
 
     }
 
